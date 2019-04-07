@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <th:block th:include="~{fragments/navbar}"></th:block>
+    </header>
+    <main>
+        <div class="jumbotron bg-white mt-4" id="mainDiv">
+            <h2 id="choiceH2" class="form-check form-check-inline">Your Choice</h2>
+            <h2 id="virusH2" class="form-check form-check-inline" hidden>All Viruses</h2>
+            <h2 id="capitallH2" class="form-check form-check-inline" hidden>All Capitals</h2>
+
+            <div class="form-check-inline float-right h3">
+                <div class="form-check form-check-inline" id="divRadioViruses">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioViruses"
+                           value="option1">
+                    <label class="form-check-label" for="radioViruses">Viruses</label>
+                </div>
+                <div class="form-check form-check-inline" id="divRadioCapitals">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioCapitals"
+                           value="option2">
+                    <label class="form-check-label" for="radioCapitals">Capitals</label>
+                </div>
+            </div>
+
+            <h2 id="initialH2" class="d-flex justify-content-center">Select what data you want to visualisze!</h2>
+
+            <table class="table" id="list-table">
+                <thead id="virus-thead" hidden>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Magnitude</th>
+                    <th scope="col">Released On</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <thead id="capital-thead" hidden>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Longitude</th>
+                </tr>
+                </thead>
+                <tbody id="list-table-body">
+
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+</div>
+
+<script th:inline="javascript">
+    controlListData(); // defined in residentevil.js
+</script>
+
+</body>
+</html>
