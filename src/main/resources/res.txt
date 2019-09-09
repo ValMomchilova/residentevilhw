@@ -1,5 +1,5 @@
 res=new test
-///*
+///**
 test=true
 ***
 =======
