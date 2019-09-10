@@ -1,5 +1,6 @@
 res=new test
 ///**//**
+//right
 test=true
 ***
 dev=false
