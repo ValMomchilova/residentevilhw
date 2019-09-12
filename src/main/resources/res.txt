@@ -3,7 +3,7 @@ res=new test
 //right
 test=true
 ***
-=======
+origin3
 dev=false
 origin1
 origin2
